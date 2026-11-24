@@ -195,122 +195,6 @@ h2 {
   grid-column: span 2;
 }
 
-
-
-/* CINEMATIC COLOUR GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
-}
-
-.gallery-item {
-  position: relative;
-  grid-column: span 4;
-  overflow: hidden;
-  border: 1px solid #424757;
-  background: #10131c;
-  cursor: pointer;
-}
-
-.gallery-item.featured {
-  grid-column: span 8;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: transform .5s ease;
-  cursor: zoom-in;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.04);
-}
-
-.gallery-item figcaption {
-  padding: 13px 15px;
-  color: #c6cbd7;
-  font-size: 11px;
-  letter-spacing: 3px;
-  border-top: 1px solid #424757;
-}
-
-.gallery-category {
-  color: #aab0c2;
-  font-size: 10px;
-  letter-spacing: 4px;
-  margin: 45px 0 15px;
-}
-
-/* PHOTO LIGHTBOX */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(5, 7, 14, .94);
-  align-items: center;
-  justify-content: center;
-  padding: 35px;
-}
-
-.lightbox.active {
-  display: flex;
-}
-
-.lightbox img {
-  max-width: 92%;
-  max-height: 88vh;
-  object-fit: contain;
-  box-shadow: 0 0 45px rgba(150, 160, 200, .15);
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 38px;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-@media(max-width: 700px) {
-  .gallery-item,
-  .gallery-item.featured {
-    grid-column: span 6;
-  }
-
-  .gallery-item img {
-    height: 190px;
-  }
-
-  .lightbox {
-    padding: 12px;
-  }
-
-  .lightbox img {
-    max-width: 100%;
-  }
-}
-
-
-
-.gallery-note {
-  padding: 25px;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 23px;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-}
-
 .sword {
   text-align: center;
   padding: 90px 20px;
@@ -346,8 +230,6 @@ footer {
   .card { min-height: 210px; }
   .card img { min-height: 210px; }
   .wide { grid-column: span 2; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-note { grid-column: span 2; }
 }
 </style>
 </head>
@@ -358,7 +240,7 @@ footer {
   <div class="logo">O / A.</div>
   <nav>
     <a href="#collection">Collection</a>
-    <a href="#gallery">Gallery</a>
+    <a href="gallery.html">Gallery</a>
     <a href="#archive">Archive</a>
   </nav>
 </header>
@@ -383,54 +265,54 @@ footer {
 
     <a class="card" href="#favorites">
       <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=700" alt="Universe">
-      <div class="card-label"><small>01 / DISCOVER</small><h3>Our Favorites</h3></div>
+      <div class="card-label">
+        <small>01 / DISCOVER</small>
+        <h3>Our Favorites</h3>
+      </div>
     </a>
 
-    <a class="card" href="#gallery">
+    <a class="card" href="gallery.html">
       <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700" alt="Night sky">
-      <div class="card-label"><small>02 / REMEMBER</small><h3>Gallery</h3></div>
+      <div class="card-label">
+        <small>02 / REMEMBER</small>
+        <h3>Gallery</h3>
+      </div>
     </a>
 
     <a class="card" href="#anime">
       <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" alt="Fantasy landscape">
-      <div class="card-label"><small>03 / EXPLORE</small><h3>Anime</h3></div>
+      <div class="card-label">
+        <small>03 / EXPLORE</small>
+        <h3>Anime</h3>
+      </div>
     </a>
 
     <a class="card" href="#movies">
       <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=700" alt="Cinema">
-      <div class="card-label"><small>04 / WATCH</small><h3>Movies</h3></div>
+      <div class="card-label">
+        <small>04 / WATCH</small>
+        <h3>Movies</h3>
+      </div>
     </a>
 
     <a class="card" href="#pet-peeves">
       <img src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?w=700" alt="Moon">
-      <div class="card-label"><small>05 / CONFESS</small><h3>Pet Peeves</h3></div>
+      <div class="card-label">
+        <small>05 / CONFESS</small>
+        <h3>Pet Peeves</h3>
+      </div>
     </a>
 
     <a class="card" href="#bad-habits">
       <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=700" alt="Galaxy">
-      <div class="card-label"><small>06 / ADMIT</small><h3>Bad Habits</h3></div>
+      <div class="card-label">
+        <small>06 / ADMIT</small>
+        <h3>Bad Habits</h3>
+      </div>
     </a>
 
   </div>
 </section>
-
-
-<section class="section" id="gallery">
-
-<section class="section" id="gallery">
-  <p class="section-label">A COLLECTION OF TWO</p>
-  <h2>Our Gallery</h2>
-  <p>A collection of moments worth keeping.</p>
-
-  <a href="gallery.html" class="gallery-link">
-    ENTER THE GALLERY →
-  </a>
-</section>
-  
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-  <img id="lightboxImage" src="" alt="Enlarged gallery photo">
-</div>
 
 <section class="sword" id="archive">
   <p>07 — OUR CONSTELLATION</p>
@@ -441,37 +323,6 @@ footer {
 <footer>
   ONI & ADA · THE UNDERWORLD ARCHIVE · 2026
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImage = document.getElementById("lightboxImage");
-  const closeButton = document.getElementById("lightboxClose");
-
-  document.querySelectorAll(".gallery-item img").forEach(image => {
-    image.addEventListener("click", () => {
-      lightboxImage.src = image.src;
-      lightbox.classList.add("active");
-    });
-  });
-
-  closeButton.addEventListener("click", () => {
-    lightbox.classList.remove("active");
-  });
-
-  lightbox.addEventListener("click", event => {
-    if (event.target === lightbox) {
-      lightbox.classList.remove("active");
-    }
-  });
-
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      lightbox.classList.remove("active");
-    }
-  });
-});
-</script>
 
 </body>
 </html>
