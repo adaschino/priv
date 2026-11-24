@@ -522,9 +522,15 @@ footer {
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightboxImage");
   const closeButton = document.getElementById("lightboxClose");
+
+  if (!lightbox || !lightboxImage || !closeButton) {
+    console.error("Lightbox elements are missing.");
+    return;
+  }
 
   document.querySelectorAll(".gallery-item img").forEach(image => {
     image.addEventListener("click", () => {
@@ -548,6 +554,7 @@ footer {
       lightbox.classList.remove("active");
     }
   });
+});
 </script>
 
 </body>
