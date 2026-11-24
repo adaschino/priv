@@ -521,5 +521,34 @@ footer {
   ONI & ADA · THE UNDERWORLD ARCHIVE · 2026
 </footer>
 
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const closeButton = document.getElementById("lightboxClose");
+
+  document.querySelectorAll(".gallery-item img").forEach(image => {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  closeButton.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      lightbox.classList.remove("active");
+    }
+  });
+</script>
+
 </body>
 </html>
